@@ -9,7 +9,9 @@ const app = express();
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
-
+app.get('/yewo', (req, res)=> {
+  res.send('ENV: '+process.env.API_KEY);
+})
 // Put all API endpoints under '/api'
 app.get('/api/passwords', (req, res) => {
   const count = 5;
