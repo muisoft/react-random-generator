@@ -1,6 +1,6 @@
-//if(process.env.PORT !== 'production'){
+if(process.env.PORT !== 'production'){
   require('dotenv').config();
-//}
+}
 const express = require('express');
 const path = require('path');
 const generatePassword = require('password-generator');
